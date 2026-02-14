@@ -1,134 +1,123 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Daily Links</title>
-<style>
-  /* FONT MODERN */
-  body { 
-    background-color: #ffffff !important; 
-    display: flex; 
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !important;
-  }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Daily Links</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            margin: 0;
+        }
+        h1 { color: #1a2a3a; margin-bottom: 30px; }
+        
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+            gap: 15px;
+            width: 100%;
+            max-width: 500px;
+        }
 
-  /* JUDUL UTAMA */
-  h1 { color: #2d3748; margin-bottom: 30px; }
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border: 1px solid #e1e4e8;
+        }
 
-  /* TABEL LINK */
-  table { 
-    border-collapse: separate !important; 
-    border-spacing: 15px !important; 
-    border: none !important; 
-  }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
 
-  /* KOTAK MEMBULAT */
-  td { 
-    background-color: #f8fafc !important; 
-    border-radius: 20px !important; 
-    padding: 20px !important; 
-    text-align: center;
-    border: 1px solid #e2e8f0 !important;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05) !important; 
-    transition: transform 0.2s;
-    width: 100px; /* Ukuran kotak seragam */
-  }
+        .card img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
 
-  td:hover { 
-    transform: scale(1.1); 
-    background-color: #edf2f7 !important;
-  }
+        .card span {
+            font-size: 12px;
+            font-weight: 600;
+            color: #334155;
+            text-align: center;
+        }
 
-  /* GAMBAR / LOGO */
-  img {
-    width: 50px !important; /* Ukuran logo seragam */
-    height: auto !important;
-    display: block;
-    margin: 0 auto 10px auto;
-  }
-
-  /* TEKS LINK */
-  a {
-    text-decoration: none !important;
-    font-size: 12px !important;
-    color: #4a5568 !important;
-    font-weight: 600;
-  }
-</style>
+        /* Responsif HP agar tidak terpotong */
+        @media (max-width: 380px) {
+            .bento-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
 </head>
 <body>
 
-<h1>My Daily Links</h1>
+    <h1>My Daily Links</h1>
 
-<table>
-  <tr>
-    <td>
-      <a href="https://drive.google.com">
-        <img src="index_files/image001.png" alt="Drive">
-        Google Drive
-      </a>
-    </td>
-    <td>
-      <a href="https://mail.google.com">
-        <img src="index_files/image002.png" alt="Gmail">
-        Gmail
-      </a>
-    </td>
-    <td>
-      <a href="https://youtube.com">
-        <img src="index_files/image003.png" alt="Youtube">
-        Youtube
-      </a>
-    </td>
-    <td>
-      <a href="https://facebook.com">
-        <img src="index_files/image004.png" alt="FB">
-        Facebook
-      </a>
-    </td>
-    <td>
-      <a href="https://web.whatsapp.com">
-        <img src="index_files/image005.png" alt="WA">
-        WhatsApp
-      </a>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://chat.openai.com">
-        <img src="index_files/image006.png" alt="ChatGPT">
-        Chat GPT
-      </a>
-    </td>
-    <td>
-      <a href="https://gemini.google.com">
-        <img src="index_files/image007.png" alt="Gemini">
-        Gemini AI
-      </a>
-    </td>
-    <td>
-      <a href="https://claude.ai">
-        <img src="index_files/image008.png" alt="Claude">
-        Claude AI
-      </a>
-    </td>
-    <td>
-      <a href="https://instagram.com">
-        <img src="index_files/image009.png" alt="IG">
-        Instagram
-      </a>
-    </td>
-    <td>
-      <a href="https://copilot.microsoft.com">
-        <img src="index_files/image010.png" alt="Copilot">
-        Copilot AI
-      </a>
-    </td>
-  </tr>
-</table>
+    <div class="bento-grid">
+        <a href="https://drive.google.com" class="card">
+            <img src="https://cdn-icons-png.flaticon.com/512/2991/2991147.png" alt="Drive">
+            <span>Google Drive</span>
+        </a>
+
+        <a href="https://mail.google.com" class="card">
+            <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Gmail">
+            <span>Gmail</span>
+        </a>
+
+        <a href="https://www.youtube.com" class="card">
+            <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="Youtube">
+            <span>YouTube</span>
+        </a>
+
+        <a href="https://www.facebook.com" class="card">
+            <img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" alt="Facebook">
+            <span>Facebook</span>
+        </a>
+
+        <a href="https://web.whatsapp.com" class="card">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+            <span>WhatsApp</span>
+        </a>
+
+        <a href="https://chat.openai.com" class="card">
+            <img src="https://cdn-icons-png.flaticon.com/512/12222/12222588.png" alt="ChatGPT">
+            <span>Chat GPT</span>
+        </a>
+
+        <a href="https://gemini.google.com" class="card">
+            <img src="https://www.gstatic.com/lamda/images/gemini_sparkle_v002_d473530c25e2944c3b0c5.svg" alt="Gemini">
+            <span>Gemini AI</span>
+        </a>
+
+        <a href="https://claude.ai" class="card">
+            <img src="https://cdn.worldvectorlogo.com/logos/claude-ai.svg" alt="Claude">
+            <span>Claude AI</span>
+        </a>
+
+        <a href="https://www.instagram.com" class="card">
+            <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram">
+            <span>Instagram</span>
+        </a>
+
+        <a href="https://copilot.microsoft.com" class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Microsoft_M365_Copilot_Icon.svg" alt="Copilot">
+            <span>Copilot AI</span>
+        </a>
+    </div>
 
 </body>
 </html>
